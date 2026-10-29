@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maseno University Facilities</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="navbar">
+        <div class="brand">
+            <h1>MASENO UNIVERSITY FACILITIES</h1>
+            <p>Geospatial inventory · Interactive facility map</p>
+        </div>
+        <div class="header-actions">
+            <button id="reset-view-btn">Reset view</button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <button class="collapse-btn" id="collapse-btn">‹ Collapse</button>
+            
+            <!-- Quick Search Widget -->
+            <div class="widget search-widget">
+                <h3>🔍 Quick search</h3>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Type facility name...">
+                    <button id="search-btn">→</button>
+                </div>
+                <div class="select-box">
+                    <label>— or select from list —</label>
+                    <select id="facility-select">
+                        <option value="">— named facility —</option>
+                    </select>
+                </div>
+                <p class="hint">Click any shape for attributes. Search zooms to first match.</p>
+            </div>
+
+            <!-- Map Legend Widget -->
+            <div class="widget legend-widget">
+                <h3>🗺️ Map legend</h3>
+                <div class="badge" id="theme-count">3 DATA THEMES</div>
+                <ul class="legend-list" id="legend-list">
+                    <!-- Populated dynamically via JS -->
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Map Container -->
+        <div id="map"></div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
