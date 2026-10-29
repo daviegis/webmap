@@ -13,13 +13,13 @@ body, html {
 
 /* Navbar */
 .navbar {
-    height: 60px;
+    height: 80px;
     background-color: #0d3b66;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 30px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 1000;
     position: relative;
